@@ -4,8 +4,8 @@ $idd = $_GET['id'];
 $rep=$bdd->query("SELECT * FROM events WHERE id_ev='".$idd."' ");
 $donnee=$rep->fetch();
 $rp=$bdd->prepare('INSERT INTO calendar 
-            (intitulé,thème,id_org,date_db,date_fn,id_salle,commentaire) 
-            VALUES (:intitule,:theme,:organisateur,:date_db,:date_fn,:salle,:commentaire)');
+            (intitulé,thème,id_org,date_db,date_fn,commentaire,id_salle) 
+            VALUES (:intitule,:theme,:organisateur,:date_db,:date_fn,:commentaire,:salle)');
 
             $rp->execute(array(
             'intitule' => $donnee['intitulé'],

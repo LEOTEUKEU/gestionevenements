@@ -97,7 +97,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=DATABASE;charset=utf8', 'root', '');
 
     <!-- Footer -->
     <footer class="footer">
-        <p>Copyright © 2020</p>
+        <p>Copyright © 2024 IAI-CAMEROUN</p>
     </footer>
 
     <!-- fonction de scroll vers le bas si on click sur view calendar -->
@@ -161,8 +161,8 @@ $bdd = new PDO('mysql:host=localhost;dbname=DATABASE;charset=utf8', 'root', '');
       center:'title',
       right:'month,agendaWeek,agendaDay'
      },
-     <?php $bdd = new PDO('mysql:host=localhost;dbname=projet_web;charset=utf8', 'root', ''); ?>
-     events:[ <?php $reponse = $bdd->query('SELECT * FROM calendar'); 
+     <?php $bdd = new PDO('mysql:host=localhost;dbname=database;charset=utf8', 'root', ''); ?>
+     events:[ <?php $reponse = $bdd->query('SELECT * FROM events'); 
                    while ($donnees = $reponse->fetch())
      { ?>
          {
